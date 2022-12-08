@@ -26,7 +26,7 @@ public class ChangePasswordPage extends CasinoBase {
     @FindBy(css= ".cg-input-label-error.text-left > span")
     public WebElement incorrectPasswordIsDisplay;
    public ChangePasswordPage(){
-        PageFactory.initElements(driver, this);
+       PageFactory.initElements(driver, this);
     }
 
 

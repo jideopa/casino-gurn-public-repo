@@ -14,6 +14,7 @@ public class CasinoHooks extends CasinoBase {
     public void setup() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+
         try {
             TimeUnit.SECONDS.sleep(4);
             driver.get(CasinoURL.LOGIN_URL.getUrl());
