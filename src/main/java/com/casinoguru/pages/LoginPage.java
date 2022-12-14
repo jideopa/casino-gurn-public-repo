@@ -18,8 +18,9 @@ public class LoginPage extends CasinoBase {
     @FindBy(css = "[data-ga-id='general_login_btn_logIn']")
     public WebElement submitButton;
 
-    @FindBy(css = "span[title='cleanbeat.ent@gmail.com']")
+    @FindBy(css = ".email .avatar")
     public WebElement profileIcon;
+
 
     public LoginPage (){
         PageFactory.initElements(driver,this);

@@ -4,7 +4,7 @@ import lombok.Getter;
 
 @Getter
 public enum Players {
-    EXISTING_Player("cleanbeat.ent@gmail.com","superman2022");
+    EXISTING_Player("casino-guru-automation@outlook.com","superman2022");
 
     public final String email;
     public final String password;

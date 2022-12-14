@@ -1,6 +1,6 @@
 Feature: Change password
 
-  @debug
+
   Scenario: Unsuccessful change password
     Given Enter a valid login
     And user is on the change password page

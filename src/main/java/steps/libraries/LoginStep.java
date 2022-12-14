@@ -5,16 +5,18 @@ import com.casinoguru.pages.LoginPage;
 import com.casinoguru.utils.enums.Players;
 import org.awaitility.Awaitility;
 import static java.util.concurrent.TimeUnit.SECONDS;
+import static org.awaitility.Awaitility.await;
+
 public class LoginStep extends CasinoBase {
-    LoginPage login = new LoginPage();
+    LoginPage loginPage = new LoginPage();
     public void completeLoginForm() {
-        Awaitility.await().atMost(5, SECONDS).until(login.loginButton::isDisplayed);
-        login.loginButton.click();
-        login.emailField.sendKeys(Players.EXISTING_Player.getEmail());
-        login.passwordField.sendKeys(Players.EXISTING_Player.getPassword());
-        login.submitButton.click();
+       await().atMost(5, SECONDS).until(loginPage.loginButton::isDisplayed);
+        loginPage.loginButton.click();
+        loginPage.emailField.sendKeys(Players.EXISTING_Player.getEmail());
+        loginPage.passwordField.sendKeys(Players.EXISTING_Player.getPassword());
+        loginPage.submitButton.click();
     }
     public boolean profileIconIsDisplay() {
-        return login.profileIcon.isDisplayed();
+        return loginPage.profileIcon.isDisplayed();
     }
 }
